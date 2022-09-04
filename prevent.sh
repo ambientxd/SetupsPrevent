@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Epic PteroVM preventer
 
 while true; do
