@@ -1,1 +1,8 @@
-{ while true; do kill $(pgrep -f "bash installer.sh") &>/dev/null && clear && echo "You fucking tried."; sleep 1 ;done } & disown $!
+#!/bin/bash
+wordlist="pterovm rootlessarch xmrig"
+
+while true; do
+  for x in wordlist; do
+    kill $(ps -aux | grep -i $x | awk '{ print $2 }') && clear && echo 'You tried running those on our server.'
+  done
+done
