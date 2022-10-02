@@ -4,6 +4,7 @@ wordlist="PteroVM RootlessArch XMRig"
 newwordlist=""
 for word in $wordlist; do
   newwordlist="-e $word "
+done
   
 while true; do
   if [ "$(cat /tmp/output.log | grep $newwordlist)" != "" ]; then
